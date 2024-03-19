@@ -30,6 +30,10 @@ app.use(cors({
     credentials:true
 }))
 
+app.get("/",(req,res)=>{
+    res.json({result:"working"});
+})
+
 app.post("/login",(req,res)=>{
     const email = req.body.email ; 
     req.session.email = email ; 
