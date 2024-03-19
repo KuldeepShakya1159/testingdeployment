@@ -9,9 +9,10 @@ const Home = ()=>{
         let response = await fetch("https://testingdeployment-server.vercel.app/login",{
             credentials:"include"
         })
-        response= await response.json();
+        response= await response.json();   
         setUser(response.result);
-        console.log(response.result);
+        console.log("response from home component" ,response.result);
+        console.log("response from home component" , user);
     }
 
     useEffect(()=>{
