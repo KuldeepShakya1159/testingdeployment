@@ -25,7 +25,7 @@ app.use(session({
 
 
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://testingdeployment-frontend.vercel.app"],
     methods:["GET","POST"],
     credentials:true
 }))
