@@ -13,14 +13,13 @@ app.use(express.json());
 app.use(session({
     name:"session-name",
     secret:process.env.SESSION_KEY,
-    httpOnly:true,
+    httpOnly:false,
     path:"/",
     saveUninitialized: false,
     store:mongostore.create({
-        mongoUrl:process.env.DB_URL,
-        ttl: 14 * 24 * 60 * 60,
+        mongoUrl:process.env.DB_URL
     }),
-    cookie: { maxAge: 14 * 24 * 60 * 60 * 1000,
+    cookie: { maxAge: 86400000,
             sameSite:"none",
             secure:true,
             },
