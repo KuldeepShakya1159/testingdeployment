@@ -17,9 +17,10 @@ app.use(session({
     path:"/",
     saveUninitialized: false,
     store:mongostore.create({
-        mongoUrl:process.env.DB_URL
+        mongoUrl:process.env.DB_URL,
+        ttl: 14 * 24 * 60 * 60,
     }),
-    cookie: { maxAge: 86400000,
+    cookie: { maxAge: 14 * 24 * 60 * 60 * 1000,
             sameSite:"none",
             secure:true,
             },
