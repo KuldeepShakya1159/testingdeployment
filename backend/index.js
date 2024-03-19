@@ -47,6 +47,7 @@ app.post("/login",(req,res)=>{
 
 app.get("/login",(req,res)=>{
     const email = req.session.email;
+    console.log(req.session);
     console.log(email);
     if(email !==undefined||""){
         res.status(200).json({result:`session is present for this ${email} user`})
