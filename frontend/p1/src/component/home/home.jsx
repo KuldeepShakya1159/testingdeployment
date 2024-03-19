@@ -6,7 +6,7 @@ const Home = ()=>{
     const[user,setUser] = useState("");
 
     const setLogin = async ()=>{
-        let response = await fetch("http://localhost:5000/login",{
+        let response = await fetch("https://testingdeployment-server.vercel.app/login",{
             credentials:"include"
         })
         response= await response.json();
