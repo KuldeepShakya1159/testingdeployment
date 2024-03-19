@@ -17,7 +17,7 @@ const Login = ()=>{
         })
 
         response = await response.json();
-        console.log(response.result);
+        console.log("response from login component" ,response.result);
     }
 
     return(
