@@ -6,7 +6,7 @@ const Login = ()=>{
     const[email,setEmail]=useState("");
 
     const handleClick = async () =>{
-        let response  = await fetch("http://localhost:5000/login",{
+        let response  = await fetch("https://testingdeployment-server.vercel.app/login",{
             method:"POST",
             mode:"cors",
             credentials:"include",
