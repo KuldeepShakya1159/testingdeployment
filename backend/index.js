@@ -22,7 +22,7 @@ app.use(session({
     cookie: { maxAge: 86400000,
             sameSite:"none",
             secure:true,
-             domain:".testingdeployment-frontend.vercel.app",
+             domain:"https://testingdeployment-frontend.vercel.app",
             },
     resave: false,
 }))
