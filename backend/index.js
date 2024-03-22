@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(session({
     name:"session-name",
     secret:process.env.SESSION_KEY,
-    httpOnly:false,
+    httpOnly:true,
     path:"/",
     saveUninitialized: false,
     store:mongostore.create({
@@ -22,7 +22,7 @@ app.use(session({
     cookie: { maxAge: 86400000,
             sameSite:"none",
             secure:true,
-             domain:"https://testingdeployment-frontend.vercel.app",
+             domain:".vercel.app",
             },
     resave: false,
 }))
