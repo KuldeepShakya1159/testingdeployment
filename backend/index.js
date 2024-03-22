@@ -19,10 +19,10 @@ app.use(session({
     store:mongostore.create({
         mongoUrl:process.env.DB_URL
     }),
-    cookie: { maxAge: 86400000,
-            sameSite:"none",
+    sameSite:"none",
             secure:true,
              domain:".vercel.app",
+    cookie: { maxAge: 86400000
             },
     resave: false,
 }))
